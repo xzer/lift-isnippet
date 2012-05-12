@@ -1,2 +1,7 @@
 /project
 /target
+.project
+.classpath
+/bin
+.cache
+.settings
