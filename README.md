@@ -47,9 +47,10 @@ help-using specification missing. You can use it in your app already and you can
 customise it for your own situation since the source is pretty simple.  
 
 FAQ
-=============
+---
 
-Q: How to use it? 
+Q: How to use it?
+
 A: There is a sample built in the source, just download it and run(by maven). And you
 can package it to a jar and put it in your classpath, unfortunately since I started
 this project just recently, there is no a maven repository hosting it yet.
