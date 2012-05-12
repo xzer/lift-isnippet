@@ -46,6 +46,12 @@ At present, this extension has been fully functional but there are still some us
 help-using specification missing. You can use it in your app already and you can easily
 customise it for your own situation since the source is pretty simple.  
 
+TODO
+---
+ 1. allow to custormise the built-in comet name for avoiding name conflicting.
+ 
+ 2. allow to custormise wait time and loading message in per snippet calling.
+
 FAQ
 ---
 
