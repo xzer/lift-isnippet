@@ -30,6 +30,7 @@ object Isnippet extends ISnippetBase{}
 
 trait ISnippetBase extends Logger{
   
+  /*
   protected implicit def pimp(elem: Elem) = new {
     def %(attrs: collection.Map[String, String]) = {
       val seq = for ((n, v) <- attrs) yield createAttribute(n, v)
@@ -53,6 +54,7 @@ trait ISnippetBase extends Logger{
   private def createSnippetTag(snippetName:String) = {
     new Elem("lift", snippetName, Null, TopScope)
   }
+  */
   
   private class ResultHolder{
       @volatile var result: Box[NodeSeq] = Empty
