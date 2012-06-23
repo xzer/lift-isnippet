@@ -9,14 +9,17 @@
   <body>
       <h2>IntelligentSnippet Test</h2>
 
+    <!-- classical usage as a lift snippet -->
     <lift:isnippet lift:parallel="true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=1"></div>
     </lift:isnippet>
-     
+    
+    <!-- classical usage as a lift snippet -->
     <div id="dummy" class="lift:Isnippet?parallel=true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=2"></div>
     </div>
     
+    <!-- use a custormised snippet name if we do not want to use the default name of "isnippet" -->
     <div id="dummy" class="lift:MySmartSnippet?parallel=true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=3"></div>
     </div>
@@ -56,10 +59,13 @@
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=15"></div>
     </lift:isnippet>
     
+    <!-- the onloading message will be replaced by a embed template declared via message -->
     <lift:isnippet lift:parallel="true" message="/templates-hidden/custormised_loading">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=16"></div>
     </lift:isnippet>
-        
+    
+    <!-- see also ISnippetRule for default global settings -->
+    
   </body>
 </html>
 
