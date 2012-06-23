@@ -48,7 +48,8 @@ customise it for your own situation since the source is pretty simple.
 
 TODO
 ---
- 1. to test whether there are problems when we need access RequestVar or SessionVar
+ 1. Test whether there are problems when we need access RequestVar or SessionVar
+ 2. Follow the lift module conventions and try to publish to lift moudle repository 
 
 FAQ
 ---
