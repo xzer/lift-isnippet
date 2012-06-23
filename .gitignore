@@ -1,6 +1,15 @@
 /project/target
 /target
 /bin
+
+/core/project/target
+/core/target
+/core/bin
+
+/example/project/target
+/example/target
+/example/bin
+
 .project
 .classpath
 .cache
