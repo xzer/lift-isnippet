@@ -9,37 +9,56 @@
   <body>
       <h2>IntelligentSnippet Test</h2>
 
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <lift:isnippet lift:parallel="true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=1"></div>
-    </div>
+    </lift:isnippet>
      
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <div id="dummy" class="lift:Isnippet?parallel=true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=2"></div>
     </div>
     
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <div id="dummy" class="lift:MySmartSnippet?parallel=true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=3"></div>
     </div>
      
-    <div id="dummy" class="lift:ISnippet?parallel=true">
-       <div class="lift:ISnippetExample.renderAfterSleep?sleep=4"></div>
-    </div>
+    <lift:isnippet lift:parallel="true" target="ISnippetExample.renderAfterSleep" sleep="4">
+    </lift:isnippet>
     
-            <div id="dummy" class="lift:ISnippet?parallel=true">
+    <lift:isnippet lift:parallel="true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=5"></div>
-    </div>
+    </lift:isnippet>
      
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <lift:isnippet lift:parallel="true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=6"></div>
-    </div>
+    </lift:isnippet>
     
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <lift:isnippet lift:parallel="true">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=7"></div>
-    </div>
+    </lift:isnippet>
      
-    <div id="dummy" class="lift:ISnippet?parallel=true">
+    <!-- 
+      the waitFor declaration will cause the total waiting time be
+      extended to 8 seconds 
+     -->
+    <div id="dummy" class="lift:Isnippet?parallel=true&waitFor=8">
        <div class="lift:ISnippetExample.renderAfterSleep?sleep=8"></div>
     </div>
+    
+    <lift:isnippet lift:parallel="true">
+       <div class="lift:ISnippetExample.renderAfterSleep?sleep=9"></div>
+    </lift:isnippet>
+    
+    <lift:isnippet lift:parallel="true">
+       <div class="lift:ISnippetExample.renderAfterSleep?sleep=10"></div>
+    </lift:isnippet>
+    
+    <lift:isnippet lift:parallel="true">
+       <div class="lift:ISnippetExample.renderAfterSleep?sleep=15"></div>
+    </lift:isnippet>
+    
+    <lift:isnippet lift:parallel="true" message="/templates-hidden/custormised_loading">
+       <div class="lift:ISnippetExample.renderAfterSleep?sleep=16"></div>
+    </lift:isnippet>
         
   </body>
 </html>

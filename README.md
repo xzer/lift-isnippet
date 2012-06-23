@@ -10,7 +10,7 @@ There is parallel snippet and lazy load parallel in lift, but the parallel one
 would always block the client request until the snippet processing finished and
 the lazy load one would always output a comet handler to client despite even if
 the snippet finished immediately. So this extension is for synthesise their pros
-and discharge the cons.
+and avoid the cons.
 
 See the following example:
 
@@ -48,9 +48,7 @@ customise it for your own situation since the source is pretty simple.
 
 TODO
 ---
- 1. allow to custormise the built-in comet name for avoiding name conflicting.
- 
- 2. allow to custormise wait time and loading message in per snippet calling.
+ 1. to test whether there are problems when we need access RequestVar or SessionVar
 
 FAQ
 ---

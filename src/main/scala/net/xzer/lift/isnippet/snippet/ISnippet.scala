@@ -23,11 +23,10 @@ import net.xzer.lift.isnippet.comet.ISnippetRender
 import net.liftweb.common.Logger
 import net.xzer.lift.isnippet.util.ISnippetRule
 
-object ISnippet extends ISnippetBase{
-  override def render(in:NodeSeq):NodeSeq = {
-    super.render(in)
-  }
-}
+/**
+ * we let the snippet's name can be compatible with HTML5 rendering
+ */
+object Isnippet extends ISnippetBase{}
 
 trait ISnippetBase extends Logger{
   
@@ -57,14 +56,18 @@ trait ISnippetBase extends Logger{
   
   private class ResultHolder{
       @volatile var result: Box[NodeSeq] = Empty
-  }  
+  }
   
   def render(in: NodeSeq):NodeSeq = {
+    //it seems that it is difficult to pass the attributes safely
+    //so commet it.
+    /*
     val target:NodeSeq = S.attr("target") match {
       case Full(t) => createSnippetTag(t)
       case _ => in
     }
-    doRender(target)
+    */
+    doRender(in)
   }
   
   private def doRender(in:NodeSeq) = {
@@ -119,15 +122,17 @@ trait ISnippetBase extends Logger{
     
     (new ParalleActor) ! executor
     
-    val template = S.attr("template") openOr ("")
+    val template = S.attr("message") openOr ("")
     
-    val loadingMessage = if(template.isEmpty()){
-      ISnippetRule.defaultLoadingMessage
-    }else{
-      <lift:embed what={template}/>
+    val loadingMessage = S.attr("message") match {
+      case Full(template) => <lift:embed what={template}/>
+      case _ => ISnippetRule.defaultLoadingMessage
     }
     
-    <div id={id} class={ISnippetRule.defaultLoadingMessageWrapperCssClassName}>{loadingMessage}</div><lift:comet type="ISnippetRenderComet" name={id}/>
+    <xml:group>
+      <div id={id} class={ISnippetRule.defaultLoadingMessageWrapperCssClassName}>{loadingMessage}</div>
+      <lift:comet type={ISnippetRule.defaultCometType} name={id}/>
+    </xml:group>
   }  
 
 }

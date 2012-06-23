@@ -6,6 +6,8 @@ import scala.xml.Text
 
 object ISnippetRule {
   
+  @volatile var defaultCometType: String = "ISnippetRenderComet"
+  
   @volatile var defaultWaitFor: TimeSpan = 5 seconds
   
   @volatile var defaultLoadingMessage: NodeSeq = new Text("Loading...")
