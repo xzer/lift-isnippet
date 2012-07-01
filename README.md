@@ -57,6 +57,10 @@ FAQ
 Q: How to use it?
 
 A: There is a [sample](http://github.com/xzer/lift-isnippet/blob/master/example/src/main/webapp/index.html)
-built in the source, just download it and run(See RunWebApp.scala). And you can package it
-to a jar and put it in your classpath, unfortunately since I started this project just recently,
-there is no a maven repository hosting it yet.
+built in the source, just download it and run(See RunWebApp.scala) or see a
+[online sample](http://isnippet.cloudfoundry.com/). The online sample is hosted on [Cloud Foundry](http://www.cloudfoundry.com/)
+and on where it dit not run quickly as usually, so refresh some times and you can understand how the example works.
+You can also understand the mechanism better by checking the output html source of the example page.
+
+Unfortunately since I started this project just recently, there is no a maven repository hosting it yet, 
+you can package it to a jar and put it in your classpath.
